@@ -1489,12 +1489,14 @@ MonoBehaviour:
   reachedFloorTarget: 0
   grabbableToEnemies: 0
   uniqueChargeStationText: 'Defuse : [E]'
-  numberOfFlashes: 3
-  startColor: {r: 1, g: 0.9757806, b: 0.0047169924, a: 0}
-  endColor: {r: 1, g: 0, b: 0, a: 0}
-  defusedColor: {r: 0, g: 1, b: 0.0013723373, a: 0}
-  preDetonationEmission: {fileID: 0}
-  postDetonationEmission: {fileID: 0}
+  injectMasterMixer: 1
+  sourcesToLinkToMaster:
+  - {fileID: 6818137703400940309}
+  TickLight1: {fileID: 7375429782473080667}
+  TickLight2: {fileID: 3752989506595511313}
+  TickLight3: {fileID: 2212553957258448182}
+  detonationLight: {fileID: 5846590728080444946}
+  defusedLight: {fileID: 5664990380016186345}
 --- !u!114 &7810142994978468826
 MonoBehaviour:
   m_ObjectHideFlags: 0

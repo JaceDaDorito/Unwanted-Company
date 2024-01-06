@@ -40,7 +40,10 @@ namespace UnwantedCompany
 						foreach (var source in prefab.GetComponentsInChildren<AudioSource>())
 						{
 							if (ucgo.sourcesToLinkToMaster.Contains(source))
+                            {
 								source.outputAudioMixerGroup = BaseGameCaches.masterDiageticMixer;
+								UnwantedCompany.logger.LogDebug(source.outputAudioMixerGroup.ToString());
+							}
 						}
 					}
 				}

@@ -22,8 +22,8 @@ namespace UnwantedCompany
             instance = this;
 
             logger = base.Logger;
-            Content.Load();
             BaseGameCaches.Init();
+            Content.Load();
             Patches.Load();
 
             logger.LogInfo(ModName + " loaded!");

@@ -29,6 +29,7 @@ namespace UnwantedCompany
                 throw new Exception("Failed to locate a suitable AudioSource output mixer to reference! Could you be calling this method before the GameNetworkManager is initialized?");
             }
             masterDiageticMixer = referenceAudioSource.outputAudioMixerGroup;
+            UnwantedCompany.logger.LogDebug(masterDiageticMixer.name);
         }
     }
 }

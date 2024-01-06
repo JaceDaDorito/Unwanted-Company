@@ -62,7 +62,6 @@ namespace UnwantedCompany
                 c.EmitDelegate(CustomTextEmitter);
                 c.Emit(OpCodes.Br, brLabel);
                 c.MarkLabel(newLabel);
-                UnwantedCompany.logger.LogInfo($"Works");
             }
             else
                 UnwantedCompany.logger.LogWarning($"Couldn't patch SetHoverTipAndCurrentInteractTrigger");
@@ -70,8 +69,6 @@ namespace UnwantedCompany
 
         private static bool UCGrabbableCheck(PlayerControllerB arg0)
         {
-            UnwantedCompany.logger.LogWarning($"held object nullcheck: " + arg0.currentlyHeldObjectServer == null);
-
             return arg0.currentlyHeldObjectServer is UCGrabbableObject;
         }
 
