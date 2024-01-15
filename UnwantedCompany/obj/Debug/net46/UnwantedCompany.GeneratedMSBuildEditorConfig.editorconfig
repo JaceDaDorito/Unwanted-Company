@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = UnwantedCompany
-build_property.ProjectDir = D:\Unwanted-Company\UnwantedCompany\
+build_property.ProjectDir = C:\Users\jtorr\Documents\GitHub\UnwantedCompany\Unwanted-Company\UnwantedCompany\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

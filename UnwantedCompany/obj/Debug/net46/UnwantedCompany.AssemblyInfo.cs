@@ -11,12 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Runtime.CompilerServices.IgnoresAccessChecksToAttribute("")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnwantedCompany")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Enemy Mod")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa3e3154d4fa0b5ede857ef63ae709b54cab769d")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnwantedCompany")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnwantedCompany")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

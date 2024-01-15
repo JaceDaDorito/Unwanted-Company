@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj": {}
+    "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj": {}
   },
   "projects": {
-    "D:\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj": {
+    "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
+        "projectUniqueName": "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
         "projectName": "UnwantedCompany",
-        "projectPath": "D:\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
-        "packagesPath": "C:\\Users\\Jason\\.nuget\\packages\\",
-        "outputPath": "D:\\Unwanted-Company\\UnwantedCompany\\obj\\",
+        "projectPath": "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
+        "packagesPath": "C:\\Users\\jtorr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jason\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jtorr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,22 +42,18 @@
           "targetAlias": "net46",
           "dependencies": {
             "BepInEx.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.*, )"
-            },
-            "BepInEx.AssemblyPublicizer.MSBuild": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[0.4.1, )"
+              "version": "[1.0.8, )"
             },
             "BepInEx.Core": {
               "target": "Package",
-              "version": "[5.*, )"
+              "version": "[5.4.21, )"
             },
             "BepInEx.PluginInfoProps": {
               "target": "Package",
-              "version": "[1.*, )"
+              "version": "[2.1.0, )"
             },
             "LethalAPI.GameLibs": {
               "target": "Package",
@@ -80,7 +76,7 @@
               "version": "[2022.3.9, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

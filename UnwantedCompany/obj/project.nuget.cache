@@ -1,22 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "r/MehMkkhIpQJA+di36IPDFnMOXBLTkjQoct1cQMjoY1APWGc74TY4aFZ9lhoxp4CtLKBYo5FP5OqjgCanH3oA==",
+  "dgSpecHash": "73fkX5iuQ2DR1dp4hXPsiof3tvKUNgXdirewgIkP3daRyodxexCX2cSe+q+AU8Qqqyyb7oN3U2aER0GWHD9hpA==",
   "success": true,
-  "projectFilePath": "D:\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
+  "projectFilePath": "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Jason\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\bepinex.assemblypublicizer.msbuild\\0.4.1\\bepinex.assemblypublicizer.msbuild.0.4.1.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\bepinex.core\\5.4.21\\bepinex.core.5.4.21.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\bepinex.plugininfoprops\\1.1.0\\bepinex.plugininfoprops.1.1.0.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\harmonyx\\2.7.0\\harmonyx.2.7.0.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\lethalapi.gamelibs\\45.1.0\\lethalapi.gamelibs.45.1.0.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.3\\microsoft.netframework.referenceassemblies.net46.1.0.3.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\mono.cecil\\0.11.4\\mono.cecil.0.11.4.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\monomod.runtimedetour\\21.12.13.1\\monomod.runtimedetour.21.12.13.1.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\monomod.utils\\21.12.13.1\\monomod.utils.21.12.13.1.nupkg.sha512",
-    "C:\\Users\\Jason\\.nuget\\packages\\unityengine.modules\\2022.3.9\\unityengine.modules.2022.3.9.nupkg.sha512"
+    "C:\\Users\\jtorr\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\bepinex.core\\5.4.21\\bepinex.core.5.4.21.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\bepinex.plugininfoprops\\2.1.0\\bepinex.plugininfoprops.2.1.0.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\harmonyx\\2.7.0\\harmonyx.2.7.0.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\lethalapi.gamelibs\\45.1.0\\lethalapi.gamelibs.45.1.0.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.3\\microsoft.netframework.referenceassemblies.net46.1.0.3.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\mono.cecil\\0.11.4\\mono.cecil.0.11.4.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\monomod.runtimedetour\\21.12.13.1\\monomod.runtimedetour.21.12.13.1.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\monomod.utils\\21.12.13.1\\monomod.utils.21.12.13.1.nupkg.sha512",
+    "C:\\Users\\jtorr\\.nuget\\packages\\unityengine.modules\\2022.3.9\\unityengine.modules.2022.3.9.nupkg.sha512"
   ],
   "logs": []
 }

@@ -5,19 +5,6 @@
       "BepInEx.Analyzers/1.0.8": {
         "type": "package"
       },
-      "BepInEx.AssemblyPublicizer.MSBuild/0.4.1": {
-        "type": "package",
-        "contentFiles": {
-          "contentFiles/cs/any/IgnoresAccessChecksToAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          }
-        },
-        "build": {
-          "build/BepInEx.AssemblyPublicizer.MSBuild.props": {}
-        }
-      },
       "BepInEx.BaseLib/5.4.20": {
         "type": "package",
         "compile": {
@@ -43,7 +30,7 @@
           "build/BepInEx.Core.targets": {}
         }
       },
-      "BepInEx.PluginInfoProps/1.1.0": {
+      "BepInEx.PluginInfoProps/2.1.0": {
         "type": "package",
         "build": {
           "build/BepInEx.PluginInfoProps.props": {}
@@ -55,10 +42,14 @@
           "MonoMod.RuntimeDetour": "21.12.13.1"
         },
         "compile": {
-          "lib/net45/0Harmony.dll": {}
+          "lib/net45/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/0Harmony.dll": {}
+          "lib/net45/0Harmony.dll": {
+            "related": ".xml"
+          }
         }
       },
       "LethalAPI.GameLibs/45.1.0": {
@@ -385,16 +376,32 @@
       "Mono.Cecil/0.11.4": {
         "type": "package",
         "compile": {
-          "lib/net40/Mono.Cecil.Mdb.dll": {},
-          "lib/net40/Mono.Cecil.Pdb.dll": {},
-          "lib/net40/Mono.Cecil.Rocks.dll": {},
-          "lib/net40/Mono.Cecil.dll": {}
+          "lib/net40/Mono.Cecil.Mdb.dll": {
+            "related": ".pdb"
+          },
+          "lib/net40/Mono.Cecil.Pdb.dll": {
+            "related": ".pdb"
+          },
+          "lib/net40/Mono.Cecil.Rocks.dll": {
+            "related": ".pdb"
+          },
+          "lib/net40/Mono.Cecil.dll": {
+            "related": ".Mdb.pdb;.pdb;.Pdb.pdb;.Rocks.pdb"
+          }
         },
         "runtime": {
-          "lib/net40/Mono.Cecil.Mdb.dll": {},
-          "lib/net40/Mono.Cecil.Pdb.dll": {},
-          "lib/net40/Mono.Cecil.Rocks.dll": {},
-          "lib/net40/Mono.Cecil.dll": {}
+          "lib/net40/Mono.Cecil.Mdb.dll": {
+            "related": ".pdb"
+          },
+          "lib/net40/Mono.Cecil.Pdb.dll": {
+            "related": ".pdb"
+          },
+          "lib/net40/Mono.Cecil.Rocks.dll": {
+            "related": ".pdb"
+          },
+          "lib/net40/Mono.Cecil.dll": {
+            "related": ".Mdb.pdb;.pdb;.Pdb.pdb;.Rocks.pdb"
+          }
         }
       },
       "MonoMod.RuntimeDetour/21.12.13.1": {
@@ -407,10 +414,14 @@
           "System"
         ],
         "compile": {
-          "lib/net452/MonoMod.RuntimeDetour.dll": {}
+          "lib/net452/MonoMod.RuntimeDetour.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net452/MonoMod.RuntimeDetour.dll": {}
+          "lib/net452/MonoMod.RuntimeDetour.dll": {
+            "related": ".xml"
+          }
         }
       },
       "MonoMod.Utils/21.12.13.1": {
@@ -422,10 +433,14 @@
           "System"
         ],
         "compile": {
-          "lib/net452/MonoMod.Utils.dll": {}
+          "lib/net452/MonoMod.Utils.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net452/MonoMod.Utils.dll": {}
+          "lib/net452/MonoMod.Utils.dll": {
+            "related": ".xml"
+          }
         }
       },
       "UnityEngine.Modules/2022.3.9": {
@@ -520,31 +535,6 @@
         "tools/uninstall.ps1"
       ]
     },
-    "BepInEx.AssemblyPublicizer.MSBuild/0.4.1": {
-      "sha512": "bbTaXa0CKDuap0vDR+NkSz9crQIYhMvIbId9njUajYZAcr8OTuVcyiSlexzeGxfkYAbbn0z9YpgbIoeyHADXqA==",
-      "type": "package",
-      "path": "bepinex.assemblypublicizer.msbuild/0.4.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "bepinex.assemblypublicizer.msbuild.0.4.1.nupkg.sha512",
-        "bepinex.assemblypublicizer.msbuild.nuspec",
-        "build/BepInEx.AssemblyPublicizer.MSBuild.props",
-        "contentFiles/cs/any/IgnoresAccessChecksToAttribute.cs",
-        "lib/net472/AsmResolver.DotNet.dll",
-        "lib/net472/AsmResolver.PE.File.dll",
-        "lib/net472/AsmResolver.PE.dll",
-        "lib/net472/AsmResolver.dll",
-        "lib/net472/BepInEx.AssemblyPublicizer.MSBuild.dll",
-        "lib/net472/BepInEx.AssemblyPublicizer.dll",
-        "lib/netstandard2.1/AsmResolver.DotNet.dll",
-        "lib/netstandard2.1/AsmResolver.PE.File.dll",
-        "lib/netstandard2.1/AsmResolver.PE.dll",
-        "lib/netstandard2.1/AsmResolver.dll",
-        "lib/netstandard2.1/BepInEx.AssemblyPublicizer.MSBuild.dll",
-        "lib/netstandard2.1/BepInEx.AssemblyPublicizer.dll"
-      ]
-    },
     "BepInEx.BaseLib/5.4.20": {
       "sha512": "0bXgYxbCEN2Ixp3kiFEhyw+RASeFQeg/ww+lbMt7if6XMeVS60eg6epNsMA8Jbx57dmNOzNevkKKw8mP8SUMqw==",
       "type": "package",
@@ -574,13 +564,13 @@
         "tools/Install.ps1"
       ]
     },
-    "BepInEx.PluginInfoProps/1.1.0": {
-      "sha512": "RqM3aaGs8Hc2m0D+8aSt9mv09rCMYNIF35NB3D6KA2zSpcXJh/9ZVWrPlIUJfA8KYzodSWcCMUexEW24fjwR3w==",
+    "BepInEx.PluginInfoProps/2.1.0": {
+      "sha512": "VCG3QRiqNdW9ku2FEcNsbK+HKxrZmW0VxwMNyLNO7h0xGorU+C6vBHN8Qq4eAL5fU11Uks5x2uoYdqEoKD3P8A==",
       "type": "package",
-      "path": "bepinex.plugininfoprops/1.1.0",
+      "path": "bepinex.plugininfoprops/2.1.0",
       "files": [
         ".nupkg.metadata",
-        "bepinex.plugininfoprops.1.1.0.nupkg.sha512",
+        "bepinex.plugininfoprops.2.1.0.nupkg.sha512",
         "bepinex.plugininfoprops.nuspec",
         "build/BepInEx.PluginInfoProps.props"
       ]
@@ -1381,10 +1371,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6": [
-      "BepInEx.Analyzers >= 1.*",
-      "BepInEx.AssemblyPublicizer.MSBuild >= 0.4.1",
-      "BepInEx.Core >= 5.*",
-      "BepInEx.PluginInfoProps >= 1.*",
+      "BepInEx.Analyzers >= 1.0.8",
+      "BepInEx.Core >= 5.4.21",
+      "BepInEx.PluginInfoProps >= 2.1.0",
       "LethalAPI.GameLibs >= 45.1.0",
       "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.2",
       "Microsoft.NETFramework.ReferenceAssemblies.net46 >= 1.0.3",
@@ -1392,19 +1381,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jason\\.nuget\\packages\\": {}
+    "C:\\Users\\jtorr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
+      "projectUniqueName": "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
       "projectName": "UnwantedCompany",
-      "projectPath": "D:\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
-      "packagesPath": "C:\\Users\\Jason\\.nuget\\packages\\",
-      "outputPath": "D:\\Unwanted-Company\\UnwantedCompany\\obj\\",
+      "projectPath": "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\UnwantedCompany.csproj",
+      "packagesPath": "C:\\Users\\jtorr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jtorr\\Documents\\GitHub\\UnwantedCompany\\Unwanted-Company\\UnwantedCompany\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jason\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jtorr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1432,22 +1421,18 @@
         "targetAlias": "net46",
         "dependencies": {
           "BepInEx.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[1.*, )"
-          },
-          "BepInEx.AssemblyPublicizer.MSBuild": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[0.4.1, )"
+            "version": "[1.0.8, )"
           },
           "BepInEx.Core": {
             "target": "Package",
-            "version": "[5.*, )"
+            "version": "[5.4.21, )"
           },
           "BepInEx.PluginInfoProps": {
             "target": "Package",
-            "version": "[1.*, )"
+            "version": "[2.1.0, )"
           },
           "LethalAPI.GameLibs": {
             "target": "Package",
@@ -1470,7 +1455,7 @@
             "version": "[2022.3.9, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
