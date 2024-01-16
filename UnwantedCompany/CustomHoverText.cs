@@ -75,11 +75,11 @@ namespace UnwantedCompany
         private static void CustomTextEmitter(PlayerControllerB arg0, InteractTrigger interactTrigger)
         {
             UCGrabbableObject ucgo = (UCGrabbableObject)(arg0.currentlyHeldObjectServer);
-            UnwantedCompany.logger.LogInfo(interactTrigger.animationString);
+            //UnwantedCompany.logger.LogInfo(interactTrigger.animationString);
             if(!String.IsNullOrEmpty(ucgo.uniqueChargeStationText))
                 arg0.cursorTip.text = interactTrigger.animationString.Equals("SA_ChargeItem") ? ucgo.uniqueChargeStationText : interactTrigger.holdTip;
 
-            UnwantedCompany.logger.LogInfo(arg0.cursorTip.text);
+            //UnwantedCompany.logger.LogInfo(arg0.cursorTip.text);
         }
 
     }

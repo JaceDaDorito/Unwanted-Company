@@ -55,6 +55,11 @@
               "target": "Package",
               "version": "[2.1.0, )"
             },
+            "Evaisa.NetcodePatcher.MSBuild": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.*, )"
+            },
             "LethalAPI.GameLibs": {
               "target": "Package",
               "version": "[45.1.0, )"

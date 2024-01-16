@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802765024303672084}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00104, y: 0.00169, z: 0.00095}
+  m_LocalRotation: {x: 3.5527137e-15, y: 0.00000004470348, z: 1.5881866e-22, w: 1}
+  m_LocalPosition: {x: 0.001, y: -0.0030800013, z: 0.003193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1043923227987408972}
+  m_Father: {fileID: 2932403829500823512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &7375429782473080667
 Light:
@@ -45,8 +45,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9562949, g: 1, b: 0, a: 1}
-  m_Intensity: 0.007957747
-  m_Range: 10
+  m_Intensity: 0.011936621
+  m_Range: 13
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 0.1
+  m_Intensity: 0.15
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -300,42 +300,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &1701580483160750123
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1043923227987408972}
-  m_Layer: 6
-  m_Name: Lights
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1043923227987408972
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701580483160750123}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.00477, z: 0.00223}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7898792042939655475}
-  - {fileID: 5775265762402633540}
-  - {fileID: 4155484095114609889}
-  - {fileID: 618562106234947813}
-  - {fileID: 4407668535006242340}
-  m_Father: {fileID: 2932403829500823512}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2048784910663365412
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +331,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1043923227987408972}
+  - {fileID: 4407668535006242340}
+  - {fileID: 618562106234947813}
+  - {fileID: 4155484095114609889}
+  - {fileID: 5775265762402633540}
+  - {fileID: 7898792042939655475}
   m_Father: {fileID: 6883626493309304147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8798701229793055826
@@ -531,12 +499,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3370197321152606252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00118, y: 0.00169, z: -0.00014}
+  m_LocalRotation: {x: 3.5527137e-15, y: 0.00000004470348, z: 1.5881866e-22, w: 1}
+  m_LocalPosition: {x: -0.001, y: -0.0030799995, z: 0.00209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1043923227987408972}
+  m_Father: {fileID: 2932403829500823512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &5846590728080444946
 Light:
@@ -550,8 +518,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.066497564, g: 1, b: 0, a: 1}
-  m_Intensity: 0.007957747
-  m_Range: 10
+  m_Intensity: 0.011936621
+  m_Range: 13
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -612,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 0.1
+  m_Intensity: 0.15
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -748,12 +716,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4500822274206249392}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00009899991, y: 0.0016899989, z: 0.0009520002}
+  m_LocalRotation: {x: 3.5527137e-15, y: 0.00000004470348, z: 1.5881866e-22, w: 1}
+  m_LocalPosition: {x: 0, y: -0.00308, z: 0.003193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1043923227987408972}
+  m_Father: {fileID: 2932403829500823512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &3752989506595511313
 Light:
@@ -767,8 +735,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9811321, g: 0.48080087, b: 0, a: 1}
-  m_Intensity: 0.007957747
-  m_Range: 10
+  m_Intensity: 0.011936621
+  m_Range: 13
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -829,7 +797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 0.1
+  m_Intensity: 0.15
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1048,12 +1016,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5430018641287832757}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00118, y: 0.00169, z: 0.00095}
+  m_LocalRotation: {x: 3.5527137e-15, y: 0.00000004470348, z: 1.5881866e-22, w: 1}
+  m_LocalPosition: {x: -0.001, y: -0.0030799995, z: 0.003193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1043923227987408972}
+  m_Father: {fileID: 2932403829500823512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &2212553957258448182
 Light:
@@ -1067,8 +1035,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.248857, b: 0, a: 1}
-  m_Intensity: 0.007957747
-  m_Range: 10
+  m_Intensity: 0.011936621
+  m_Range: 13
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1129,7 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 0.1
+  m_Intensity: 0.15
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1266,11 +1234,11 @@ Transform:
   m_GameObject: {fileID: 5724271237675363020}
   serializedVersion: 2
   m_LocalRotation: {x: 3.5527137e-15, y: 0.00000004470348, z: 1.5881866e-22, w: 1}
-  m_LocalPosition: {x: 0.0010400004, y: 0.0016899987, z: -0.000049999217}
+  m_LocalPosition: {x: 0.001, y: -0.0030800013, z: 0.002180001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1043923227987408972}
+  m_Father: {fileID: 2932403829500823512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &5664990380016186345
 Light:
@@ -1284,8 +1252,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0.10731268, a: 1}
-  m_Intensity: 0.007957747
-  m_Range: 10
+  m_Intensity: 0.011936621
+  m_Range: 13
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1346,7 +1314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 0.1
+  m_Intensity: 0.15
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1663,8 +1631,13 @@ MonoBehaviour:
   TickLight1: {fileID: 7375429782473080667}
   TickLight2: {fileID: 3752989506595511313}
   TickLight3: {fileID: 2212553957258448182}
-  detonationLight: {fileID: 5846590728080444946}
-  defusedLight: {fileID: 5664990380016186345}
+  detonationLight: {fileID: 5664990380016186345}
+  defusedLight: {fileID: 5846590728080444946}
+  currentLightState: 1
+  defused:
+    m_InternalValue: 0
+  hasExploded:
+    m_InternalValue: 0
 --- !u!114 &7810142994978468826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1683,8 +1656,8 @@ MonoBehaviour:
   ActiveSceneSynchronization: 0
   SceneMigrationSynchronization: 1
   SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
+  DontDestroyWithOwner: 1
+  AutoObjectParentSync: 0
 --- !u!82 &6818137703400940309
 AudioSource:
   m_ObjectHideFlags: 0

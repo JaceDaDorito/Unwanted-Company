@@ -36,6 +36,12 @@
           "build/BepInEx.PluginInfoProps.props": {}
         }
       },
+      "Evaisa.NetcodePatcher.MSBuild/3.3.4": {
+        "type": "package",
+        "build": {
+          "build/Evaisa.NetcodePatcher.MSBuild.props": {}
+        }
+      },
       "HarmonyX/2.7.0": {
         "type": "package",
         "dependencies": {
@@ -573,6 +579,53 @@
         "bepinex.plugininfoprops.2.1.0.nupkg.sha512",
         "bepinex.plugininfoprops.nuspec",
         "build/BepInEx.PluginInfoProps.props"
+      ]
+    },
+    "Evaisa.NetcodePatcher.MSBuild/3.3.4": {
+      "sha512": "bQ6qxHlpQj+clLg45rOUFwqjbrlcUEx8ypLAsmbjdWjhkKG5VEw6vvbEoW+gHcI3dd57SoUA13Df0dXg08dlww==",
+      "type": "package",
+      "path": "evaisa.netcodepatcher.msbuild/3.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Evaisa.NetcodePatcher.MSBuild.props",
+        "evaisa.netcodepatcher.msbuild.3.3.4.nupkg.sha512",
+        "evaisa.netcodepatcher.msbuild.nuspec",
+        "lib/net472/Microsoft.DiaSymReader.Converter.dll",
+        "lib/net472/Microsoft.DiaSymReader.dll",
+        "lib/net472/Mono.Cecil.Mdb.dll",
+        "lib/net472/Mono.Cecil.Pdb.dll",
+        "lib/net472/Mono.Cecil.Rocks.dll",
+        "lib/net472/Mono.Cecil.dll",
+        "lib/net472/NetcodePatcher.MSBuild.dll",
+        "lib/net472/NetcodePatcher.dll",
+        "lib/net472/Serilog.dll",
+        "lib/net472/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net472/Unity.Burst.dll",
+        "lib/net472/Unity.Collections.dll",
+        "lib/net472/Unity.CompilationPipeline.Common.dll",
+        "lib/net472/Unity.Mathematics.dll",
+        "lib/net472/Unity.Netcode.Runtime.dll",
+        "lib/net472/Unity.Networking.Transport.dll",
+        "lib/net472/UnityEngine.CoreModule.dll",
+        "lib/netstandard2.1/Microsoft.DiaSymReader.Converter.dll",
+        "lib/netstandard2.1/Microsoft.DiaSymReader.dll",
+        "lib/netstandard2.1/Mono.Cecil.Mdb.dll",
+        "lib/netstandard2.1/Mono.Cecil.Pdb.dll",
+        "lib/netstandard2.1/Mono.Cecil.Rocks.dll",
+        "lib/netstandard2.1/Mono.Cecil.dll",
+        "lib/netstandard2.1/NetcodePatcher.MSBuild.dll",
+        "lib/netstandard2.1/NetcodePatcher.dll",
+        "lib/netstandard2.1/Serilog.dll",
+        "lib/netstandard2.1/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard2.1/Unity.Burst.dll",
+        "lib/netstandard2.1/Unity.Collections.dll",
+        "lib/netstandard2.1/Unity.CompilationPipeline.Common.dll",
+        "lib/netstandard2.1/Unity.Mathematics.dll",
+        "lib/netstandard2.1/Unity.Netcode.Runtime.dll",
+        "lib/netstandard2.1/Unity.Networking.Transport.dll",
+        "lib/netstandard2.1/UnityEngine.CoreModule.dll"
       ]
     },
     "HarmonyX/2.7.0": {
@@ -1374,6 +1427,7 @@
       "BepInEx.Analyzers >= 1.0.8",
       "BepInEx.Core >= 5.4.21",
       "BepInEx.PluginInfoProps >= 2.1.0",
+      "Evaisa.NetcodePatcher.MSBuild >= 3.*",
       "LethalAPI.GameLibs >= 45.1.0",
       "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.2",
       "Microsoft.NETFramework.ReferenceAssemblies.net46 >= 1.0.3",
@@ -1433,6 +1487,11 @@
           "BepInEx.PluginInfoProps": {
             "target": "Package",
             "version": "[2.1.0, )"
+          },
+          "Evaisa.NetcodePatcher.MSBuild": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.*, )"
           },
           "LethalAPI.GameLibs": {
             "target": "Package",

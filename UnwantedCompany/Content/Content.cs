@@ -8,6 +8,10 @@ using LethalLib.Modules;
 using Unity.Netcode.Components;
 using UnityEngine;
 using UnwantedCompany.MonoBehaviors;
+using System.Linq;
+using System.Text;
+using Unity.Netcode.Samples;
+using UnwantedCompany.Extensions;
 
 namespace UnwantedCompany
 {
@@ -90,20 +94,29 @@ namespace UnwantedCompany
 				}
 			}
 
-			Type[] types = Assembly.GetExecutingAssembly().GetTypes();
-			for (int i = 0; i < types.Length; i++)
-			{
-				MethodInfo[] methods = types[i].GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic);
-				foreach (MethodInfo methodInfo in methods)
-				{
-					if (methodInfo.GetCustomAttributes(typeof(RuntimeInitializeOnLoadMethodAttribute), inherit: false).Length != 0)
-					{
-						methodInfo.Invoke(null, null);
-					}
-				}
-			}
+            try
+            {
+                var types = Assembly.GetExecutingAssembly().GetLoadableTypes();
+                foreach (var type in types)
+                {
+                    var methods = type.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
+                    foreach (var method in methods)
+                    {
+                        var attributes = method.GetCustomAttributes(typeof(RuntimeInitializeOnLoadMethodAttribute), false);
+                        if (attributes.Length > 0)
+                        {
+                            method.Invoke(null, null);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                UnwantedCompany.logger.LogDebug(e);
+            }
 
-			UnwantedCompany.logger.LogInfo("UC Content Loaded!");
+
+            UnwantedCompany.logger.LogInfo($"UC Content Loaded!");
 		}
 
         public class CustomItem

@@ -1,5 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using System.Reflection;
+using UnityEngine;
 
 namespace UnwantedCompany
 {
@@ -28,6 +30,5 @@ namespace UnwantedCompany
 
             logger.LogInfo(ModName + " loaded!");
         }
-
     }
 }

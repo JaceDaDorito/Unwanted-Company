@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: G.R.E.E.D.
   spawnPositionTypes: []
   twoHanded: 0
-  twoHandedAnimation: 0
+  twoHandedAnimation: 1
   canBeGrabbedBeforeGameStart: 0
   weight: 1.15
   itemIsTrigger: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
   batteryUsage: 25
   automaticallySetUsingPower: 0
   itemIcon: {fileID: 0}
-  grabAnim: 
+  grabAnim: HoldLung
   useAnim: 
   pocketAnim: 
   throwAnim: 
@@ -44,7 +44,7 @@ MonoBehaviour:
   dropSFX: {fileID: 8300000, guid: 216deb3193ee7754fbfe4717875552df, type: 3}
   pocketSFX: {fileID: 0}
   throwSFX: {fileID: 0}
-  syncGrabFunction: 0
+  syncGrabFunction: 1
   syncUseFunction: 0
   syncDiscardFunction: 0
   syncInteractLRFunction: 0
@@ -55,8 +55,8 @@ MonoBehaviour:
   floorYOffset: 0
   allowDroppingAheadOfPlayer: 1
   restingRotation: {x: -90, y: 0, z: 0}
-  rotationOffset: {x: -5.3, y: 111.9, z: 5.25}
-  positionOffset: {x: -0.39, y: 0.23, z: -0.18}
+  rotationOffset: {x: -110, y: -16, z: -70}
+  positionOffset: {x: -0.2, y: 0.1, z: 0.1}
   meshOffset: 0
   meshVariants: []
   materialVariants: []

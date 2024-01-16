@@ -328,3 +328,6 @@ C:\Users\jtorr\Documents\GitHub\UnwantedCompany\Unwanted-Company\UnwantedCompany
 C:\Users\jtorr\Documents\GitHub\UnwantedCompany\Unwanted-Company\UnwantedCompany\obj\Debug\net46\UnwantedCompany.sourcelink.json
 C:\Users\jtorr\Documents\GitHub\UnwantedCompany\Unwanted-Company\UnwantedCompany\obj\Debug\net46\UnwantedCompany.csproj.CopyComplete
 C:\Users\jtorr\Documents\GitHub\UnwantedCompany\Unwanted-Company\UnwantedCompany\obj\Debug\net46\UnwantedCompany.pdb
+C:\Users\jtorr\Documents\GitHub\UnwantedCompany\Unwanted-Company\UnwantedCompany\bin\Debug\net46\UnwantedCompany.dll.config
+C:\Users\jtorr\Documents\GitHub\UnwantedCompany\Unwanted-Company\UnwantedCompany\obj\Debug\net46\UnwantedCompany.Properties.Resources.resources
+C:\Users\jtorr\Documents\GitHub\UnwantedCompany\Unwanted-Company\UnwantedCompany\obj\Debug\net46\UnwantedCompany.csproj.GenerateResource.cache
