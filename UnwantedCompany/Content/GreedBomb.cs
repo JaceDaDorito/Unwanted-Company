@@ -10,7 +10,7 @@ using System.Linq;
 namespace UnwantedCompany.MonoBehaviors
 {
     public class GreedBomb : UCGrabbableObject
-    { 
+    {
 
         [Header("Greed Bomb")]
         public Light TickLight1;
@@ -35,8 +35,9 @@ namespace UnwantedCompany.MonoBehaviors
         public NetworkVariable<bool> defused = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
         [HideInInspector]
         public NetworkVariable<bool> hasExploded = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
-        private bool sendingDefuseRPC;
-        private bool sendingDetonateRPC;
+        [HideInInspector]
+
+        public bool canDetonate => !defused.Value && !hasExploded.Value;
 
         public static void Load()
         {
@@ -54,7 +55,6 @@ namespace UnwantedCompany.MonoBehaviors
 
                 bomb.PushLightState(LightState.Defused);
 
-                bomb.sendingDefuseRPC = true;
                 bomb.DefuseBombServerRpc();
             }
             orig(self);
@@ -65,8 +65,6 @@ namespace UnwantedCompany.MonoBehaviors
         public override void Start()
         {
             base.Start();
-            sendingDefuseRPC = false;
-            sendingDetonateRPC = false;
             PushLightState(LightState.Tick1);
         }
 
@@ -85,105 +83,65 @@ namespace UnwantedCompany.MonoBehaviors
             base.GrabItem();
             if (!defused.Value)
             {
-                //prompt message here
                 isBeingUsed = true;
-                //start detonation
             }
         }
 
         public override void Update()
         {
             base.Update();
-            if (!defused.Value && !hasExploded.Value && insertedBattery.empty)
+            if (insertedBattery.empty && canDetonate)
             {
-                AttemptDetonation();
+                DetonateBombServerRpc();
             }
         }
-
 
         [ServerRpc(RequireOwnership = false)]
         public void DefuseBombServerRpc()
         {
             defused.Value = true;
-            isBeingUsed = false;
-            uniqueChargeStationText = "[ Already Defused ]";
+
+            DefuseBombClientRpc();
         }
 
         [ClientRpc]
         public void DefuseBombClientRpc()
         {
-            
-            if (sendingDefuseRPC)
-            {
-                sendingDefuseRPC = false;
-            }
-            else
-            {
-                UnwantedCompany.logger.LogDebug($"DefuseBombClientRpc");
-                SetOffDefuseSequence();
-            }
-        }
-        public void SetOffDefuseSequence()
-        {
-            UnwantedCompany.logger.LogInfo($"DefuseSequence Started");
-
             isBeingUsed = false;
             uniqueChargeStationText = "[ Already Defused ]";
-
             PushLightState(LightState.Defused);
-        }
-        public bool AttemptDetonation()
-        {
-            UnwantedCompany.logger.LogDebug("$AttemptDetonation");
-            if (!defused.Value && !hasExploded.Value)
-            {
-                hasExploded.Value = true;
-                SetOffDetonationSequence();
-                sendingDetonateRPC = true;
-                DetonateBombServerRpc();
-                return true;
-            }
-            return false;
+            UnwantedCompany.logger.LogDebug($"DefuseBombClientRpc");
         }
 
-        [ServerRpc(RequireOwnership = true)]
+        [ServerRpc(RequireOwnership = false)]
         public void DetonateBombServerRpc()
         {
             hasExploded.Value = true;
+
             DetonateBombClientRpc();
         }
 
         [ClientRpc]
         public void DetonateBombClientRpc()
         {
-
-            if (sendingDetonateRPC)
-            {
-                sendingDetonateRPC = false;
-            }
-            else
-            {
-                UnwantedCompany.logger.LogDebug($"Client Detonation Sequence");
-                SetOffDetonationSequence();
-            }
+            SetOffDetonationSequence();
+            PushLightState(LightState.Detonate);
         }
 
         public void SetOffDetonationSequence()
         {
-            PushLightState(LightState.Detonate);
             StartCoroutine(detonateBombDelayed());
         }
 
         private IEnumerator detonateBombDelayed()
         {
             yield return new WaitForSeconds(0.5f);
-            Detonate();
-            Destroy(this.gameObject);
-        }
+            Utilities.CreateExplosion(transform.position, true, 100, 0f, 6.4f);
 
-        public void Detonate()
-        {
-            Landmine.SpawnExplosion(transform.position, true, 100, 20f);
+            if (IsServer)
+            {
+                GetComponent<NetworkObject>().Despawn();
+            }
         }
     }
 

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Enemy Mod")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3086247a6dd3319d8d4ad13eb28ae2dad78610f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c257ab59fc5440085846cc95e4482343a3fb680e")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnwantedCompany")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnwantedCompany")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

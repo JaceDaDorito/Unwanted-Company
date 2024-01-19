@@ -70,7 +70,7 @@ namespace UnwantedCompany
 				Levels.LevelTypes.RendLevel |
 				Levels.LevelTypes.DineLevel |
 				Levels.LevelTypes.TitanLevel,
-				50)
+				3)
 			};
 
 			foreach (CustomItem customItem in customItems)
