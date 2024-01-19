@@ -1634,11 +1634,17 @@ MonoBehaviour:
   detonationLight: {fileID: 5664990380016186345}
   defusedLight: {fileID: 5846590728080444946}
   currentLightState: 1
+  renderersToDisableAfterExplosion:
+  - {fileID: 4848735566655988173}
+  - {fileID: 7118236204638495043}
+  - {fileID: 7270843734586245552}
+  - {fileID: 3284451706815864160}
+  - {fileID: 135346839209317464}
   defused:
     m_InternalValue: 0
   hasExploded:
     m_InternalValue: 0
-  exploding: 0
+  explodingOnClient: 0
 --- !u!114 &7810142994978468826
 MonoBehaviour:
   m_ObjectHideFlags: 0

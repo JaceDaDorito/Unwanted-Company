@@ -19,6 +19,7 @@ namespace UnwantedCompany.MonoBehaviors
         public Light detonationLight;
         public Light defusedLight;
 
+
         public enum LightState
         {
             None = 0,
@@ -31,14 +32,14 @@ namespace UnwantedCompany.MonoBehaviors
 
         public LightState currentLightState;
 
+        public List<MeshRenderer> renderersToDisableAfterExplosion = new List<MeshRenderer>();
+
         [HideInInspector]
         public NetworkVariable<bool> defused = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
         [HideInInspector]
         public NetworkVariable<bool> hasExploded = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
         [HideInInspector]
-
-        public bool canDetonate => !defused.Value && !hasExploded.Value;
-
+        public bool explodingOnClient = false;
         public static void Load()
         {
             On.ItemCharger.ChargeItem += ItemCharger_ChargeItem;
@@ -47,7 +48,7 @@ namespace UnwantedCompany.MonoBehaviors
         private static void ItemCharger_ChargeItem(On.ItemCharger.orig_ChargeItem orig, ItemCharger self)
         {
             GrabbableObject currentlyHeldObjectServer = GameNetworkManager.Instance.localPlayerController.currentlyHeldObjectServer;
-            if (currentlyHeldObjectServer is GreedBomb bomb && !bomb.defused.Value && !bomb.hasExploded.Value)
+            if (currentlyHeldObjectServer is GreedBomb bomb && !bomb.defused.Value && !bomb.hasExploded.Value && !bomb.explodingOnClient)
             {
                 UnwantedCompany.logger.LogDebug($"Defused");
                 bomb.isBeingUsed = false;
@@ -87,14 +88,16 @@ namespace UnwantedCompany.MonoBehaviors
             }
         }
 
-        public override void Update()
+
+        public override void UseUpBatteries()
         {
-            base.Update();
-            if (insertedBattery.empty && canDetonate)
+            base.UseUpBatteries();
+            if (!defused.Value && !hasExploded.Value && !explodingOnClient)
             {
                 DetonateBombServerRpc();
             }
         }
+
 
         [ServerRpc(RequireOwnership = false)]
         public void DefuseBombServerRpc()
@@ -124,6 +127,8 @@ namespace UnwantedCompany.MonoBehaviors
         [ClientRpc]
         public void DetonateBombClientRpc()
         {
+            explodingOnClient = true;
+
             SetOffDetonationSequence();
             PushLightState(LightState.Detonate);
         }
@@ -138,9 +143,24 @@ namespace UnwantedCompany.MonoBehaviors
             yield return new WaitForSeconds(0.5f);
             Utilities.CreateExplosion(transform.position, true, 100, 0f, 6.4f);
 
+            foreach(MeshRenderer mr in renderersToDisableAfterExplosion)
+            {
+                mr.enabled = false;
+            }
+
+            GetComponentInChildren<ScanNodeProperties>().enabled = false;
+
+            PushLightState(LightState.None);
+            grabbable = false;
+            grabbableToEnemies = false;
+            deactivated = false;
+
+            yield return new WaitForSeconds(2f);
+
             if (IsServer)
             {
-                GetComponent<NetworkObject>().Despawn();
+                Destroy(this.gameObject);
+                //GetComponent<NetworkObject>().Despawn();
             }
         }
     }
