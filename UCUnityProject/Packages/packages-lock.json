@@ -1,5 +1,28 @@
 {
   "dependencies": {
+    "com.nomnom.unity-lc-project-patcher": {
+      "version": "https://github.com/nomnomab/unity-lc-project-patcher.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "0d2b163c035d766438274b7210d66c469aa0a4ea"
+    },
+    "com.nomnom.unity-project-patcher": {
+      "version": "https://github.com/nomnomab/unity-project-patcher.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "2.0.0"
+      },
+      "hash": "b30526f7f0267a9e9e54aa6c31a2f86af87120ad"
+    },
+    "com.nomnom.unity-project-patcher-bepinex": {
+      "version": "https://github.com/nomnomab/unity-project-patcher-bepinex.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "72a7520ec240e2f9c977607156ec76fd3034f150"
+    },
     "com.unity.ai.navigation": {
       "version": "1.1.5",
       "depth": 0,
@@ -36,7 +59,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.2.0",
+      "version": "2.4.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -44,7 +67,7 @@
     },
     "com.unity.collections": {
       "version": "1.2.4",
-      "depth": 2,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.burst": "1.6.6",
@@ -106,7 +129,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.7.0",
+      "version": "1.8.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -126,8 +149,8 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.nuget.mono-cecil": "1.10.1",
-        "com.unity.transport": "1.3.4"
+        "com.unity.transport": "1.3.4",
+        "com.unity.nuget.mono-cecil": "1.10.1"
       },
       "url": "https://packages.unity.com"
     },
@@ -138,11 +161,29 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.performance.profile-analyzer": {
       "version": "1.2.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.probuilder": {
+      "version": "5.1.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.settings-manager": "1.0.3"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
@@ -190,7 +231,7 @@
     },
     "com.unity.settings-manager": {
       "version": "2.0.1",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -239,9 +280,9 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -251,8 +292,8 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.collections": "1.2.4",
         "com.unity.burst": "1.6.6",
+        "com.unity.collections": "1.2.4",
         "com.unity.mathematics": "1.2.6"
       },
       "url": "https://packages.unity.com"
@@ -268,7 +309,7 @@
     },
     "com.unity.visualeffectgraph": {
       "version": "14.0.8",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.shadergraph": "14.0.8",

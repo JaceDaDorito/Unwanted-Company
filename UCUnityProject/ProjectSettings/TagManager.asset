@@ -46,6 +46,17 @@ TagManager:
   - Rock
   - PlaceableObject
   - SpawnDenialPoint
+  - PlayerBody
+  - PlayerBody1
+  - PlayerBody2
+  - PlayerBody3
+  - PlayerRagdoll1
+  - PlayerRagdoll2
+  - PlayerRagdoll3
+  - MoldAttractionPoint
+  - MoldSpore
+  - MoldSporeCollider
+  - CaveNode
   layers:
   - Default
   - TransparentFX
@@ -63,7 +74,7 @@ TagManager:
   - Triggers
   - MapRadar
   - NavigationSurface
-  - RoomLight
+  - MoldSpore
   - Anomaly
   - LineOfSight
   - Enemies
@@ -76,8 +87,8 @@ TagManager:
   - PlaceableShipObjects
   - PlacementBlocker
   - Railing
-  - 
-  - 
+  - DecalStickableSurface
+  - Vehicle
   - 
   m_SortingLayers:
   - name: Default
