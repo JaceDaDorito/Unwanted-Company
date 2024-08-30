@@ -1,16 +1,12 @@
 # Ignore everything in the project
-UCProject/*
-UCProject/Assets/*
-UCProject/Assets/LethalCompany/*
+UCUnityProject/*
+UCUnityProject/Assets/*
+UCUnityProject/Assets/LethalCompany/*
 
 # Except the Assets/LethalCompany/Mods/plugins directories
-!UCProject/Assets/
-!UCProject/Assets/Editor/
-!UCProject/Assets/LethalCompany/
-!UCProject/Assets/LethalCompany/Mods/
-!UCProject/Assets/LethalCompany/Mods/plugins/**
-UCProject/Assets/LethalCompany/Mods/plugins/UnwantedCompany/main.unity.meta
-
-# Gitignore csproj.user so people use template instead.
-Plugin/UCProject.csproj.user
-Plugin/UCProject.csproj.user.template
+!UCUnityProject/Assets/
+!UCUnityProject/Assets/Editor/
+!UCUnityProject/Assets/LethalCompany/
+!UCUnityProject/Assets/LethalCompany/Mods/
+!UCUnityProject/Assets/LethalCompany/Mods/plugins/**
+UCUnityProject/Assets/LethalCompany/Mods/plugins/UnwantedCompany/main.unity.meta
