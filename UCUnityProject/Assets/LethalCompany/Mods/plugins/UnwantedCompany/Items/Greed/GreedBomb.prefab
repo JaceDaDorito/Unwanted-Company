@@ -1520,10 +1520,10 @@ GameObject:
   - component: {fileID: 8783468160281815261}
   - component: {fileID: 5187650620103859496}
   - component: {fileID: 2626386371200502918}
-  - component: {fileID: 4508748531426989931}
   - component: {fileID: 7810142994978468826}
   - component: {fileID: 6818137703400940309}
   - component: {fileID: 1193819059017376607}
+  - component: {fileID: 2888670992772203307}
   m_Layer: 6
   m_Name: GreedBomb
   m_TagString: PhysicsProp
@@ -1577,74 +1577,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.07309196, y: 0.0415031, z: 0.018106058}
   m_Center: {x: -0.00008780241, y: -0.0013474721, z: -0.00050762534}
---- !u!114 &4508748531426989931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6763251333328864985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1558018342, guid: 3bd394a8ec4ef464589248dca3111f07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabbable: 1
-  isHeld: 0
-  isHeldByEnemy: 0
-  deactivated: 0
-  parentObject: {fileID: 0}
-  targetFloorPosition: {x: 0, y: 0, z: 0}
-  startFallingPosition: {x: 0, y: 0, z: 0}
-  floorYRot: 0
-  fallTime: 0
-  hasHitGround: 0
-  scrapValue: 0
-  itemUsedUp: 0
-  playerHeldBy: {fileID: 0}
-  isPocketed: 0
-  isBeingUsed: 0
-  isInElevator: 0
-  isInShipRoom: 0
-  isInFactory: 1
-  useCooldown: 0
-  currentUseCooldown: 0
-  itemProperties: {fileID: 11400000, guid: 9e421379ae401a944ba017d61cb7639a, type: 2}
-  insertedBattery:
-    empty: 0
-    charge: 1
-  customGrabTooltip: 
-  propBody: {fileID: 0}
-  propColliders: []
-  originalScale: {x: 0, y: 0, z: 0}
-  wasOwnerLastFrame: 0
-  mainObjectRenderer: {fileID: 0}
-  scrapPersistedThroughRounds: 0
-  heldByPlayerOnServer: 0
-  radarIcon: {fileID: 0}
-  reachedFloorTarget: 0
-  grabbableToEnemies: 0
-  uniqueChargeStationText: 'Defuse : [E]'
-  injectMasterMixer: 1
-  sourcesToLinkToMaster:
-  - {fileID: 6818137703400940309}
-  TickLight1: {fileID: 7375429782473080667}
-  TickLight2: {fileID: 3752989506595511313}
-  TickLight3: {fileID: 2212553957258448182}
-  detonationLight: {fileID: 5664990380016186345}
-  defusedLight: {fileID: 5846590728080444946}
-  currentLightState: 1
-  renderersToDisableAfterExplosion:
-  - {fileID: 4848735566655988173}
-  - {fileID: 7118236204638495043}
-  - {fileID: 7270843734586245552}
-  - {fileID: 3284451706815864160}
-  - {fileID: 135346839209317464}
-  defused:
-    m_InternalValue: 0
-  hasExploded:
-    m_InternalValue: 0
-  explodingOnClient: 0
 --- !u!114 &7810142994978468826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1788,6 +1720,74 @@ LODGroup:
     - renderer: {fileID: 7118236204638495043}
     - renderer: {fileID: 135346839209317464}
   m_Enabled: 1
+--- !u!114 &2888670992772203307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6763251333328864985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1558018342, guid: 8b9080a883675ce468291c92eb8500a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabbable: 1
+  isHeld: 0
+  isHeldByEnemy: 0
+  deactivated: 0
+  parentObject: {fileID: 0}
+  targetFloorPosition: {x: 0, y: 0, z: 0}
+  startFallingPosition: {x: 0, y: 0, z: 0}
+  floorYRot: 0
+  fallTime: 1
+  hasHitGround: 0
+  scrapValue: 0
+  itemUsedUp: 0
+  playerHeldBy: {fileID: 0}
+  isPocketed: 0
+  isBeingUsed: 0
+  isInElevator: 0
+  isInShipRoom: 0
+  isInFactory: 1
+  useCooldown: 0
+  currentUseCooldown: 0
+  itemProperties: {fileID: 11400000, guid: 9e421379ae401a944ba017d61cb7639a, type: 2}
+  insertedBattery:
+    empty: 0
+    charge: 1
+  customGrabTooltip: 
+  propBody: {fileID: 0}
+  propColliders: []
+  originalScale: {x: 0, y: 0, z: 0}
+  wasOwnerLastFrame: 0
+  mainObjectRenderer: {fileID: 4848735566655988173}
+  isSendingItemRPC: 0
+  scrapPersistedThroughRounds: 0
+  heldByPlayerOnServer: 0
+  radarIcon: {fileID: 0}
+  reachedFloorTarget: 0
+  grabbableToEnemies: 1
+  hasBeenHeld: 0
+  uniqueChargeStationText: '"Defuse :[E]"'
+  injectMasterMixer: 0
+  sourcesToLinkToMaster: []
+  TickLight1: {fileID: 7375429782473080667}
+  TickLight2: {fileID: 3752989506595511313}
+  TickLight3: {fileID: 2212553957258448182}
+  detonationLight: {fileID: 5664990380016186345}
+  defusedLight: {fileID: 5846590728080444946}
+  currentLightState: 0
+  renderersToDisableAfterExplosion:
+  - {fileID: 4848735566655988173}
+  - {fileID: 7118236204638495043}
+  - {fileID: 7270843734586245552}
+  - {fileID: 3284451706815864160}
+  defused:
+    m_InternalValue: 0
+  hasExploded:
+    m_InternalValue: 0
+  explodingOnClient: 0
 --- !u!1 &8458480243446976290
 GameObject:
   m_ObjectHideFlags: 0
